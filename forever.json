@@ -1,0 +1,10 @@
+[
+    {
+      "uid": "webserver",
+      "append": true,
+      "watch": false,
+      "script": "index.js",
+      "sourceDir": "dist/",
+      "workingDir": "dist/"
+    }
+  ]
