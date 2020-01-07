@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import path from "path";
 
@@ -6,6 +7,9 @@ import {router as router_puberty} from "./routes/puberty/api/puberty";
 
 const app = express();
 const port = 8080; // default port to listen
+
+// allow cors
+app.use(cors());
 
 // define a route handler for the default home page
 app.use(express.static(path.join(__dirname, "..", "public")));
