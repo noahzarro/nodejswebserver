@@ -33,8 +33,8 @@ try {
   key = fs.readFileSync("server.key");
   cert = fs.readFileSync("server.cert");
 } catch {
-  key = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/fullchain.pem");
-  cert = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/privkey.pem");
+  key = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/privkey.pem");
+  cert = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/fullchain.pem");
 }
 
 // start https webserver
