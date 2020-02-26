@@ -4,7 +4,9 @@ import fs from "fs";
 import https from "https";
 import path from "path";
 
+import { router as router_chat } from "./routes/chat/api/chat";
 import { router as router_decidobot } from "./routes/decidobot/api/decidobot";
+import { router as router_pio_o_mat } from "./routes/pio-o-mat/api/pio-p-mat";
 import { router as router_puberty } from "./routes/puberty/api/puberty";
 
 const app = express();
@@ -19,6 +21,8 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use("/decidobot/api", router_decidobot);
 app.use("/puberty/api", router_puberty);
+app.use("/pio-o-mat/api", router_pio_o_mat);
+app.use("/chat/api", router_chat);
 
 // start the http webserver
 

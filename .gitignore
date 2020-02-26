@@ -128,3 +128,9 @@ Blog
 About
 server.cert
 server.key
+
+# Tokens
+src/routes/chat/data/token.json
+
+# Idea
+/**/.idea
