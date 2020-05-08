@@ -4,6 +4,7 @@ import fs from "fs";
 import https from "https";
 import path from "path";
 
+import { router as router_attila_bot } from "./routes/attila-bot/api/attila-bot";
 import { router as router_chat } from "./routes/chat/api/chat";
 import { router as router_decidobot } from "./routes/decidobot/api/decidobot";
 import { router as router_pio_o_mat } from "./routes/pio-o-mat/api/pio-p-mat";
@@ -23,6 +24,7 @@ app.use("/decidobot/api", router_decidobot);
 app.use("/puberty/api", router_puberty);
 app.use("/pio-o-mat/api", router_pio_o_mat);
 app.use("/chat/api", router_chat);
+app.use("/attila-bot/api", router_attila_bot);
 
 // start the http webserver
 
