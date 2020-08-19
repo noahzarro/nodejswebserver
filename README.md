@@ -8,6 +8,16 @@ until and without `A Better Way to Manage Configuration Settings in Node.js`
 ## HTTPS
 https://www.sitepoint.com/how-to-use-ssltls-with-node-js/
 
+renew certificate with:
+```bash
+sudo certbot certonly --webroot -w /home/pi/nodejswebserver/public -d www.eth-lerngruppe.ch
+```
+if it does not work, try to overwrite it with
+```bash
+sudo certbot certonly --webroot -w /home/pi/nodejswebserver/public -d www.eth-lerngruppe.ch
+```
+and then restart the raspberry
+
 ## autostart
 ```bash
 #!/bin/bash
