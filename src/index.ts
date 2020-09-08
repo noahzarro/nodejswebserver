@@ -20,6 +20,9 @@ app.use(cors());
 // define a route handler for the default home page
 app.use(express.static(path.join(__dirname, "..", "public")));
 
+// define a route handler for martins life
+app.use("/martins_life", express.static(path.join(__dirname, "martins_life")));
+
 app.use("/decidobot/api", router_decidobot);
 app.use("/puberty/api", router_puberty);
 app.use("/pio-o-mat/api", router_pio_o_mat);
@@ -29,31 +32,33 @@ app.use("/attila-bot/api", router_attila_bot);
 // start the http webserver
 
 app.listen(port, () => {
-  console.log(`server started at http://localhost:${port}`);
+    console.log(`server started at http://localhost:${port}`);
 });
 
 let key;
 let cert;
 
 try {
-  key = fs.readFileSync("server.key");
-  cert = fs.readFileSync("server.cert");
+    key = fs.readFileSync("server.key");
+    cert = fs.readFileSync("server.cert");
 } catch {
-  key = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/privkey.pem");
-  cert = fs.readFileSync("/etc/letsencrypt/live/www.eth-lerngruppe.ch/fullchain.pem");
+    key = fs.readFileSync(
+        "/etc/letsencrypt/live/www.eth-lerngruppe.ch/privkey.pem"
+    );
+    cert = fs.readFileSync(
+        "/etc/letsencrypt/live/www.eth-lerngruppe.ch/fullchain.pem"
+    );
 }
 
 // start https webserver
 https
-  .createServer(
-    {
-      key,
-      cert,
-    },
-    app
-  )
-  .listen(httpsPort, () => {
-    console.log(
-      `server started at https://localhost:${httpsPort}`
-    );
-  });
+    .createServer(
+        {
+            key,
+            cert,
+        },
+        app
+    )
+    .listen(httpsPort, () => {
+        console.log(`server started at https://localhost:${httpsPort}`);
+    });
