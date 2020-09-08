@@ -1,4 +1,4 @@
-import "phaser";
+/*import "phaser";
 const config: Phaser.Types.Core.GameConfig = {
   title: "Starfall",
   width: 800,
@@ -14,5 +14,5 @@ class StarfallGame extends Phaser.Game {
 window.onload = () => {
   const game = new StarfallGame(config);
 };
-
+*/
 // export = StarfallGame;
