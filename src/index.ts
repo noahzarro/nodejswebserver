@@ -17,6 +17,9 @@ const httpsPort = 8443; // https port
 // allow cors
 app.use(cors());
 
+// add template engine
+app.set("view engine", "ejs");
+
 // define a route handler for the default home page
 app.use(express.static(path.join(__dirname, "..", "public")));
 
