@@ -52,7 +52,7 @@ const page_structure = JSON.parse(pending);
 
 // render all first level pages
 app.get("/:page", (req, res) => {
-    res.render(req.params.page, {
+    res.render(path.join(__dirname, "..", "views", req.params.page), {
         current: req.params.page,
         page_structure,
         parent_page: null,
@@ -61,7 +61,7 @@ app.get("/:page", (req, res) => {
 
 // render all second level pages
 app.get("/:page/:subpage", (req, res) => {
-    res.render(req.params.page + "/" + req.params.subpage, {
+    res.render(path.join(__dirname, "..", "views", req.params.page, req.params.subpage), {
         current: req.params.page,
         page_structure,
         parent_page: req.params.page,
