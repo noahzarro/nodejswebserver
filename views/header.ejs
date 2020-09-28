@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>ETH Lerngruppe</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">ETH Lerngruppe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar -->
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <% page_structure.forEach(function (page) {%>
+            <li class="nav-item <% if (page.file == current) {%> active <% }%> <% if (page.sub != []) {%> dropdown <% }%>">
+              <% if (page.sub.length == 0) { %>
+                <a class="nav-link" href="<%= "/"+page.file %>"><%= page.name %></a>
+              <% } else { %>
+                <div class="dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><%=page.name%></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<%= "/"+page.file %>"><%= page.name %></a>
+                    <div class="dropdown-divider"></div>
+                    <% page.sub.forEach(function (subpage) { %>
+                      <a class="dropdown-item" href="<%= "/"+ page.file + "/" + subpage.file %>"><%= subpage.name %></a>
+                    <% })%>
+                  </div>
+                </div>
+              <% }%>
+            </li>
+            <% });%>
+        </div>
+      </nav>
+

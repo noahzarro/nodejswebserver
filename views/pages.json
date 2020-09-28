@@ -1,0 +1,7 @@
+[
+    {"file": "home", "name": "Home", "sub": []},
+    {"file": "excursions", "name": "Exkursionen", "sub":[
+        {"file": "gordevio", "name": "Gordevio"},
+        {"file": "verkehrshaus", "name": "Verkehrshaus"}
+    ]}
+]
