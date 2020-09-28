@@ -47,7 +47,7 @@ app.use("/chat/api", router_chat);
 app.use("/attila-bot/api", router_attila_bot);
 
 // load page structure
-const pending = fs.readFileSync("views/pages.json", "utf8");
+const pending = fs.readFileSync(path.join(__dirname, "..", "views/pages.json"), "utf8");
 const page_structure = JSON.parse(pending);
 
 // render all first level pages
