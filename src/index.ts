@@ -7,6 +7,7 @@ import path from "path";
 import favicon from "serve-favicon";
 
 import { router as router_attila_bot } from "./routes/attila-bot/api/attila-bot";
+import { router as router_birthday } from "./routes/birthday/api/birthday";
 import { router as router_chat } from "./routes/chat/api/chat";
 import { router as router_decidobot } from "./routes/decidobot/api/decidobot";
 import { router as router_pio_o_mat } from "./routes/pio-o-mat/api/pio-p-mat";
@@ -45,6 +46,7 @@ app.use("/puberty/api", router_puberty);
 app.use("/pio-o-mat/api", router_pio_o_mat);
 app.use("/chat/api", router_chat);
 app.use("/attila-bot/api", router_attila_bot);
+app.use("/birthday/api", router_birthday);
 
 // load page structure
 const pending = fs.readFileSync(path.join(__dirname, "..", "views/pages.json"), "utf8");
