@@ -37,7 +37,7 @@ function load_wishes() {
             const wishes = JSON.parse(res)
             wishes.forEach(wish => {
                 let title = $("<h5></h5>").addClass("card-title curly_font").css("font-weight", "bold").text(wish.name)
-                let text = $("<p></p>").addClass("card-text curly_font").text(wish.wish)
+                let text = $("<p></p>").addClass("card-text curly_font").css("white-space", "pre-line").text(wish.wish)
 
                 let card_body = $('<div></div>').addClass("card-body")
                 card_body.append(title)
