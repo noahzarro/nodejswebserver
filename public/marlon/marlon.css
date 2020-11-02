@@ -1,0 +1,14 @@
+body {
+    background-image: url(vector-flat-seamless-texture-pattern-happy-birthday_51635-1153.jpg);
+    background-repeat: repeat;
+    color: #0D3954;
+}
+
+.container {
+    background-color: wheat;
+}
+
+.curly_font {
+    font: 400 25px/0.8 'Great Vibes', Helvetica, sans-serif;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
