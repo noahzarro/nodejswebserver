@@ -55,3 +55,7 @@ function load_wishes() {
         }
     })
 }
+
+window.onload = function() {
+    load_wishes();
+};
