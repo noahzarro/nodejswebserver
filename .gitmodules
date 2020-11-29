@@ -1,0 +1,3 @@
+[submodule "public/attila-advent"]
+	path = public/attila-advent
+	url = git@github.com:noahzarro/attila-advent.git
