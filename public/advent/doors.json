@@ -1,0 +1,25 @@
+[{
+        "from": "Calmo",
+        "day": 1,
+        "media": "video",
+        "link": "/videos/1.mp4"
+    },
+    {
+        "from": "Calmo",
+        "day": 2,
+        "media": "pic",
+        "link": "/pics/2.jpg"
+    },
+    {
+        "from": "Calmo",
+        "day": 3,
+        "media": "pic",
+        "link": "/pics/3.jpg"
+    },
+    {
+        "from": "Calmo",
+        "day": 4,
+        "media": "text",
+        "link": "Ur an fagit"
+    }
+]
